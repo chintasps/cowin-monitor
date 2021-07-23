@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            width: 100vw;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darkgreen;
+        }
+
+        .content {
+            margin: 10vw;
+            margin-top: 2vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Slot Opening for ------</div>
+    <div class="content">
+        <canvas id="visual_chart"></canvas>
+    </div>
+
+    <script>
+        // === include 'setup' then 'config' above ===
+        
+        const labels = [
+            '8:00',
+            '8:05',
+            '8:10',
+            '8:15',
+            '8:20',
+            '8:25',
+            '8:30',
+            '8:35',
+            '8:40',
+            '8:45',
+            '8:50',
+            '8:55',
+            '8:00',
+            '8:05',
+            '8:10',
+            '8:15',
+            '8:20',
+            '8:25',
+            '8:30',
+            '8:35',
+            '8:40',
+            '8:45',
+            '8:50',
+            '8:55',
+            '8:00',
+            '8:05',
+            '8:10',
+            '8:15',
+            '8:20',
+            '8:25',
+            '8:30',
+            '8:35',
+            '8:40',
+            '8:45',
+            '8:50',
+            '8:55',
+            '8:00',
+            '8:05',
+            '8:10',
+            '8:15',
+            '8:20',
+            '8:25',
+            '8:30',
+            '8:35',
+            '8:40',
+            '8:45',
+            '8:50',
+            '8:55',
+            '8:00',
+            '8:05',
+            '8:10',
+            '8:15',
+            '8:20',
+            '8:25',
+            '8:30',
+            '8:35',
+            '8:40',
+            '8:45',
+            '8:50',
+            '8:55',
+            '8:00',
+            '8:05',
+            '8:10',
+            '8:15',
+            '8:20',
+            '8:25',
+            '8:30',
+            '8:35',
+            '8:40',
+            '8:45',
+            '8:50',
+            '8:55',
+        ];
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Slot',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20, 30, 45],
+            }]
+        };
+        const config = {
+            type: 'bar',
+            data,
+            options: {}
+        };
+
+        var myChart = new Chart(
+            document.getElementById('visual_chart'),
+            config
+        );
+    </script>
+</body>
+
+</html>
