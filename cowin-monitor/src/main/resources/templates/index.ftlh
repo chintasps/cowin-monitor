@@ -40,26 +40,36 @@
         }
     
     </style>
+    
+    <script>
+    	function updateCenterInPath() {
+    	
+    		document.getElementById('data_form').action = "visualize/" + document.getElementById("location-selection").value.trim();
+    	}
+    
+    </script>
 </head>
-<body>
+<body onload="updateCenterInPath();">
     <div class="header">
         Slot Assist
     </div>
     <div class="body-content">
-        <form action="load-chart" method="GET">
+        <form id="data_form" action="visualize" method="GET">
             <div class="form-group">
                 <label for="district-selection">Select a District</label>
                 <select class="form-control" name="" id="district-selection">
-                    <option value="">Thrissur</option>
+                <#list districts as district >
+                    <option value="${district}">${district}</option>
+                </#list>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="location-selection">Select Location</label>
-                <select class="form-control" name="" id="location-selection">
-                    <option value="">Amala</option>
-                    <option value="">Hosp1</option>
-                    <option value="">Hosp3</option>
+                <select class="form-control" name="" id="location-selection" onchange="updateCenterInPath();">
+                <#list centers as center >
+                    <option value="${center}">${center}</option>
+                 </#list>
                 </select>
             </div>
             
